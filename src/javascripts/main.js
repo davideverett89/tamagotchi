@@ -1,3 +1,10 @@
 import '../styles/main.scss';
+import eat from './components/eat';
 
-console.error('Hi');
+const init = () => {
+  eat.createFeeder();
+};
+
+init();
+
+export default { init };
