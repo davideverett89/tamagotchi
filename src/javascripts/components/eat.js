@@ -5,7 +5,7 @@ const createFeeder = () => {
   const myTamagotchi = creatureData.getCreature();
   let domString = '';
   domString += '<div>';
-  domString += `<h2>${myTamagotchi.name}</h2>`;
+  domString += '<h2>Eat</h2>';
   domString += `<p>Fullness: ${myTamagotchi.full}</p>`;
   domString += '<button id="healthy">Healthy</button>';
   domString += '<button id="unhealthy">Unhealthy</button>';

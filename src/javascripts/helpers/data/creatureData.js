@@ -1,6 +1,7 @@
 const myTamagotchi = {
   name: 'David',
   full: 100,
+  fun: 50,
 };
 
 const getCreature = () => myTamagotchi;
