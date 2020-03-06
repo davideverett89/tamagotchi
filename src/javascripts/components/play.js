@@ -12,17 +12,15 @@ const createPlaySection = () => {
   domString += '</div>';
   utils.printToDom('play', domString);
   const superFun = () => {
-    const funMeter = myTamagotchi.fun;
-    if (funMeter < 50) {
+    if (myTamagotchi.fun < 50) {
       myTamagotchi.fun += 50;
-    } else if (funMeter > 49 && funMeter < 100) {
+    } else if (myTamagotchi.fun > 49 && myTamagotchi.fun < 100) {
       myTamagotchi.fun = 100;
     }
     createPlaySection();
   };
   const slightlyFun = () => {
-    const funMeter = myTamagotchi.fun;
-    if (funMeter <= 98) {
+    if (myTamagotchi.fun <= 98) {
       myTamagotchi.fun += 2;
     }
     createPlaySection();
