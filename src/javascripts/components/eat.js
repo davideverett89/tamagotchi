@@ -12,19 +12,17 @@ const createFeeder = () => {
   domString += '</div>';
   utils.printToDom('eat', domString);
   const moreFull = () => {
-    const fullness = myTamagotchi.full;
-    if (fullness < 90) {
+    if (myTamagotchi.full < 90) {
       myTamagotchi.full += 10;
-    } else if (fullness > 89 && fullness < 100) {
+    } else if (myTamagotchi.full > 89 && myTamagotchi.full < 100) {
       myTamagotchi.full = 100;
     }
     createFeeder();
   };
   const lessFull = () => {
-    const fullness = myTamagotchi.full;
-    if (fullness > 3) {
+    if (myTamagotchi.full > 3) {
       myTamagotchi.full -= 3;
-    } else if (fullness < 3 && fullness > 0) {
+    } else if (myTamagotchi.full < 3 && myTamagotchi.full > 0) {
       myTamagotchi.full = 0;
     }
     createFeeder();
