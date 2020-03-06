@@ -18,7 +18,7 @@ const createFightSection = () => {
     createFightSection();
   };
   const attack = () => {
-    if (myTamagotchi.strength > 10) {
+    if (myTamagotchi.strength >= 10) {
       myTamagotchi.strength -= 10;
     } else if (myTamagotchi.strength < 10 && myTamagotchi.strength > 0) {
       myTamagotchi.strength = 0;
