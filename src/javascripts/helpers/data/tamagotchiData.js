@@ -5,6 +5,6 @@ const myTamagotchi = {
   energy: 50,
 };
 
-const getCreature = () => myTamagotchi;
+const getTamagotchi = () => myTamagotchi;
 
-export default { getCreature };
+export default { getTamagotchi };

@@ -1,8 +1,8 @@
 import utils from '../helpers/utils';
-import creatureData from '../helpers/data/creatureData';
+import tamagotchiData from '../helpers/data/tamagotchiData';
 
 const createFightSection = () => {
-  const myTamagotchi = creatureData.getCreature();
+  const myTamagotchi = tamagotchiData.getTamagotchi();
   let domString = '';
   domString += '<div>';
   domString += '<h2>Fight</h2>';
