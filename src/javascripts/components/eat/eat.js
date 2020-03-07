@@ -1,5 +1,5 @@
-import utils from '../helpers/utils';
-import tamagotchiData from '../helpers/data/tamagotchiData';
+import utils from '../../helpers/utils';
+import tamagotchiData from '../../helpers/data/tamagotchiData';
 
 const createFeeder = () => {
   const myTamagotchi = tamagotchiData.getTamagotchi();
