@@ -1,10 +1,11 @@
 import utils from '../../helpers/utils';
 import tamagotchiData from '../../helpers/data/tamagotchiData';
+import './sleep.scss';
 
 const createSleepSection = () => {
   const myTamagotchi = tamagotchiData.getTamagotchi();
   let domString = '';
-  domString += '<div>';
+  domString += '<div class="sleep">';
   domString += '<h2>Sleep</h2>';
   domString += `<p>Energy: ${myTamagotchi.energy}</p>`;
   domString += '<button id="nap">Nap</button>';

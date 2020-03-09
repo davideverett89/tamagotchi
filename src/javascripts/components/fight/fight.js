@@ -1,10 +1,11 @@
 import utils from '../../helpers/utils';
 import tamagotchiData from '../../helpers/data/tamagotchiData';
+import './fight.scss';
 
 const createFightSection = () => {
   const myTamagotchi = tamagotchiData.getTamagotchi();
   let domString = '';
-  domString += '<div>';
+  domString += '<div class="fight">';
   domString += '<h2>Fight</h2>';
   domString += `<p>Strength: ${myTamagotchi.strength}</p>`;
   domString += '<button id="run">Run</button>';

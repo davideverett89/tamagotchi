@@ -1,5 +1,24 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
-body {
-    background-color: cyan;
+#app {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 100px;
+    #eat {
+        background-color: aqua;
+    }
+    #fight {
+        background-color: bisque;
+    }
+    #play {
+        background-color: chartreuse;
+    }
+    #sleep {
+        background-color: coral;
+    }
+    .quad {
+        width: 50%;
+        height: 400px;
+        text-align: center;
+    }
 }
