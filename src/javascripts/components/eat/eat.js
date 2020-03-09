@@ -1,10 +1,11 @@
-import utils from '../helpers/utils';
-import tamagotchiData from '../helpers/data/tamagotchiData';
+import utils from '../../helpers/utils';
+import tamagotchiData from '../../helpers/data/tamagotchiData';
+import './eat.scss';
 
 const createFeeder = () => {
   const myTamagotchi = tamagotchiData.getTamagotchi();
   let domString = '';
-  domString += '<div>';
+  domString += '<div class="eat">';
   domString += '<h2>Eat</h2>';
   domString += `<p>Fullness: ${myTamagotchi.full}</p>`;
   domString += '<button id="healthy">Healthy</button>';

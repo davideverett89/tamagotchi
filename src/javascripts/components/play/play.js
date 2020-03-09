@@ -1,10 +1,11 @@
-import utils from '../helpers/utils';
-import tamagotchiData from '../helpers/data/tamagotchiData';
+import utils from '../../helpers/utils';
+import tamagotchiData from '../../helpers/data/tamagotchiData';
+import './play.scss';
 
 const createPlaySection = () => {
   const myTamagotchi = tamagotchiData.getTamagotchi();
   let domString = '';
-  domString += '<div>';
+  domString += '<div class="play">';
   domString += '<h2>Play</h2>';
   domString += `<p>Fun: ${myTamagotchi.fun}</p>`;
   domString += '<button id="super-fun">Super Fun</button>';
