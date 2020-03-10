@@ -7,4 +7,8 @@ const myTamagotchi = {
 
 const getTamagotchi = () => myTamagotchi;
 
-export default { getTamagotchi };
+const setTamagotchiPicture = (newTamagotchiPicture) => {
+  myTamagotchi.picture = newTamagotchiPicture;
+};
+
+export default { getTamagotchi, setTamagotchiPicture };
