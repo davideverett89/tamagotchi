@@ -1,3 +1,6 @@
-// .play {
-//     background-color: coral;
-// }
+@import '../../../styles/colors';
+@import '../../../styles/variables';
+
+.play {
+    @extend %action-group;
+}

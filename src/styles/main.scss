@@ -1,24 +1,25 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import '../styles/colors';
 
 #app {
     display: flex;
     flex-flow: row wrap;
     margin-top: 100px;
     #eat {
-        background-color: aqua;
+        background-color: $lavender;
     }
     #fight {
-        background-color: bisque;
+        background-color: $paleAqua;
     }
     #play {
-        background-color: chartreuse;
+        background-color: $aeroBlue;
     }
     #sleep {
-        background-color: coral;
+        background-color: $middleRedPurple;
     }
     .quad {
         width: 50%;
-        height: 400px;
+        height: 500px;
         text-align: center;
     }
 }
