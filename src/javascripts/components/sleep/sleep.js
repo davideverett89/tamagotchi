@@ -1,5 +1,6 @@
 import utils from '../../helpers/utils';
 import tamagotchiData from '../../helpers/data/tamagotchiData';
+import progress from '../progress/progress';
 import './sleep.scss';
 
 const createSleepSection = () => {
@@ -18,6 +19,7 @@ const createSleepSection = () => {
     } else if (myTamagotchi.energy > 49 && myTamagotchi.energy < 100) {
       myTamagotchi.energy = 100;
     }
+    progress.printProgress();
     createSleepSection();
   };
   const deepSlumber = () => {
@@ -26,6 +28,7 @@ const createSleepSection = () => {
     } else if (myTamagotchi.energy > 39 && myTamagotchi.energy < 100) {
       myTamagotchi.energy = 100;
     }
+    progress.printProgress();
     createSleepSection();
   };
   $('#nap').click(nap);

@@ -1,5 +1,6 @@
 import utils from '../../helpers/utils';
 import tamagotchiData from '../../helpers/data/tamagotchiData';
+import progress from '../progress/progress';
 import './fight.scss';
 
 const createFightSection = () => {
@@ -16,6 +17,7 @@ const createFightSection = () => {
     if (myTamagotchi.strength <= 99) {
       myTamagotchi.strength += 1;
     }
+    progress.printProgress();
     createFightSection();
   };
   const attack = () => {
@@ -24,6 +26,7 @@ const createFightSection = () => {
     } else if (myTamagotchi.strength < 10 && myTamagotchi.strength > 0) {
       myTamagotchi.strength = 0;
     }
+    progress.printProgress();
     createFightSection();
   };
   $('#run').click(run);
