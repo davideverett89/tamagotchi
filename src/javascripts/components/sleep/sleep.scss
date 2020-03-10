@@ -1,3 +1,6 @@
-// .sleep {
-//     background-color: cornflowerblue;
-// }
+@import '../../../styles/colors';
+@import '../../../styles/variables';
+
+.sleep {
+    @extend %action-group;
+}
