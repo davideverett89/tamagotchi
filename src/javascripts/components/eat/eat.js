@@ -1,5 +1,6 @@
 import utils from '../../helpers/utils';
 import tamagotchiData from '../../helpers/data/tamagotchiData';
+import progress from '../progress/progress';
 import './eat.scss';
 
 const createFeeder = () => {
@@ -18,6 +19,7 @@ const createFeeder = () => {
     } else if (myTamagotchi.full > 89 && myTamagotchi.full < 100) {
       myTamagotchi.full = 100;
     }
+    progress.printProgress();
     createFeeder();
   };
   const lessFull = () => {
@@ -26,6 +28,7 @@ const createFeeder = () => {
     } else if (myTamagotchi.full < 3 && myTamagotchi.full > 0) {
       myTamagotchi.full = 0;
     }
+    progress.printProgress();
     createFeeder();
   };
   $('#healthy').click(moreFull);

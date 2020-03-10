@@ -1,5 +1,6 @@
 import utils from '../../helpers/utils';
 import tamagotchiData from '../../helpers/data/tamagotchiData';
+import progress from '../progress/progress';
 import './play.scss';
 
 const createPlaySection = () => {
@@ -18,12 +19,14 @@ const createPlaySection = () => {
     } else if (myTamagotchi.fun > 49 && myTamagotchi.fun < 100) {
       myTamagotchi.fun = 100;
     }
+    progress.printProgress();
     createPlaySection();
   };
   const slightlyFun = () => {
     if (myTamagotchi.fun <= 98) {
       myTamagotchi.fun += 2;
     }
+    progress.printProgress();
     createPlaySection();
   };
   $('#super-fun').click(superFun);
