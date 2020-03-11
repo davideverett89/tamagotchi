@@ -1,5 +1,6 @@
 import utils from '../../helpers/utils';
 import tamagotchiData from '../../helpers/data/tamagotchiData';
+import './picture.scss';
 
 const pictureBuilder = () => {
   const myTamagotchi = tamagotchiData.getTamagotchi();
@@ -8,10 +9,4 @@ const pictureBuilder = () => {
   utils.printToDom('pet', domString);
 };
 
-const getPictureFromUser = () => {
-  const newTamagotchiPicture = window.prompt('Insert your Tamagotchi here!');
-  tamagotchiData.setTamagotchiPicture(newTamagotchiPicture);
-  pictureBuilder();
-};
-
-export default { getPictureFromUser };
+export default { pictureBuilder };

@@ -3,12 +3,9 @@ const myTamagotchi = {
   fun: 50,
   strength: 100,
   energy: 50,
+  picture: 'https://vignette.wikia.nocookie.net/tamagotchi/images/3/32/Marutchi.png/revision/latest?cb=20130906113534',
 };
 
 const getTamagotchi = () => myTamagotchi;
 
-const setTamagotchiPicture = (newTamagotchiPicture) => {
-  myTamagotchi.picture = newTamagotchiPicture;
-};
-
-export default { getTamagotchi, setTamagotchiPicture };
+export default { getTamagotchi };

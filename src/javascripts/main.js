@@ -12,7 +12,7 @@ const init = () => {
   fight.createFightSection();
   sleep.createSleepSection();
   progress.printProgress();
-  picture.getPictureFromUser();
+  picture.pictureBuilder();
 };
 
 init();
