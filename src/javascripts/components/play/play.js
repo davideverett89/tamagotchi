@@ -4,6 +4,7 @@ import progress from '../progress/progress';
 import './play.scss';
 
 const createPlaySection = () => {
+  const randomNum = Math.floor(Math.random() * 100);
   const myTamagotchi = tamagotchiData.getTamagotchi();
   let domString = '';
   domString += '<div class="play">';
@@ -14,11 +15,14 @@ const createPlaySection = () => {
   domString += '</div>';
   utils.printToDom('play', domString);
   const superFun = () => {
-    if (myTamagotchi.fun < 50) {
-      myTamagotchi.fun += 50;
-    } else if (myTamagotchi.fun > 49 && myTamagotchi.fun < 100) {
+    if (myTamagotchi.fun < (100 - randomNum)) {
+      myTamagotchi.fun += randomNum;
+    } else if (myTamagotchi.fun > ((100 - randomNum) - 1) && myTamagotchi.fun < 100) {
       myTamagotchi.fun = 100;
     }
+    $('#pet').animate({
+      top: '600px',
+    });
     progress.printProgress();
     createPlaySection();
   };
@@ -26,6 +30,9 @@ const createPlaySection = () => {
     if (myTamagotchi.fun <= 98) {
       myTamagotchi.fun += 2;
     }
+    $('#pet').animate({
+      top: '65px',
+    }, 1000, 'swing');
     progress.printProgress();
     createPlaySection();
   };

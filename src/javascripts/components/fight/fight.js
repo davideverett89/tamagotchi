@@ -4,6 +4,7 @@ import progress from '../progress/progress';
 import './fight.scss';
 
 const createFightSection = () => {
+  const randomNum = Math.floor(Math.random() * 100);
   const myTamagotchi = tamagotchiData.getTamagotchi();
   let domString = '';
   domString += '<div class="fight">';
@@ -14,18 +15,26 @@ const createFightSection = () => {
   domString += '</div>';
   utils.printToDom('fight', domString);
   const run = () => {
-    if (myTamagotchi.strength <= 99) {
-      myTamagotchi.strength += 1;
+    if (myTamagotchi.strength < (100 - randomNum)) {
+      myTamagotchi.strength += randomNum;
+    } else if (myTamagotchi.strength > ((100 - randomNum) - 1) && myTamagotchi.strength < 100) {
+      myTamagotchi.strength = 100;
     }
+    $('#pet').animate({
+      left: '50px',
+    });
     progress.printProgress();
     createFightSection();
   };
   const attack = () => {
-    if (myTamagotchi.strength >= 10) {
-      myTamagotchi.strength -= 10;
-    } else if (myTamagotchi.strength < 10 && myTamagotchi.strength > 0) {
+    if (myTamagotchi.strength > randomNum) {
+      myTamagotchi.strength -= randomNum;
+    } else if (myTamagotchi.strength < randomNum && myTamagotchi.strength > 0) {
       myTamagotchi.strength = 0;
     }
+    $('#pet').animate({
+      left: '1500px',
+    });
     progress.printProgress();
     createFightSection();
   };
