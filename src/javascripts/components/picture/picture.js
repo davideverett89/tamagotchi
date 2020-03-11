@@ -5,7 +5,7 @@ import './picture.scss';
 const pictureBuilder = () => {
   const myTamagotchi = tamagotchiData.getTamagotchi();
   let domString = '';
-  domString += `<img src="${myTamagotchi.picture}" alt="My Tamagotchi"/>`;
+  domString += `<img id="pet-picture" src="${myTamagotchi.picture}" alt="My Tamagotchi"/>`;
   utils.printToDom('pet', domString);
 };
 

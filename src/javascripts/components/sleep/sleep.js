@@ -4,6 +4,7 @@ import progress from '../progress/progress';
 import './sleep.scss';
 
 const createSleepSection = () => {
+  const randomNum = Math.floor(Math.random() * 100);
   const myTamagotchi = tamagotchiData.getTamagotchi();
   let domString = '';
   domString += '<div class="sleep">';
@@ -14,11 +15,15 @@ const createSleepSection = () => {
   domString += '</div>';
   utils.printToDom('sleep', domString);
   const nap = () => {
-    if (myTamagotchi.energy < 50) {
-      myTamagotchi.energy += 50;
-    } else if (myTamagotchi.energy > 49 && myTamagotchi.energy < 100) {
+    if (myTamagotchi.energy < (100 - randomNum)) {
+      myTamagotchi.energy += randomNum;
+    } else if (myTamagotchi.energy > ((100 - randomNum) - 1) && myTamagotchi.energy < 100) {
       myTamagotchi.energy = 100;
     }
+    $('#pet').animate({
+      left: '685px',
+      top: '350px',
+    });
     progress.printProgress();
     createSleepSection();
   };
@@ -28,6 +33,10 @@ const createSleepSection = () => {
     } else if (myTamagotchi.energy > 39 && myTamagotchi.energy < 100) {
       myTamagotchi.energy = 100;
     }
+    $('#pet').animate({
+      left: '685px',
+      top: '350px',
+    });
     progress.printProgress();
     createSleepSection();
   };

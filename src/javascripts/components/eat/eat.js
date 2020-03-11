@@ -4,6 +4,7 @@ import progress from '../progress/progress';
 import './eat.scss';
 
 const createFeeder = () => {
+  const randomNum = Math.floor(Math.random() * 100);
   const myTamagotchi = tamagotchiData.getTamagotchi();
   let domString = '';
   domString += '<div class="eat">';
@@ -14,18 +15,20 @@ const createFeeder = () => {
   domString += '</div>';
   utils.printToDom('eat', domString);
   const moreFull = () => {
-    if (myTamagotchi.full < 90) {
-      myTamagotchi.full += 10;
-    } else if (myTamagotchi.full > 89 && myTamagotchi.full < 100) {
+    $('#pet').toggleClass('image');
+    if (myTamagotchi.full < (100 - randomNum)) {
+      myTamagotchi.full += randomNum;
+    } else if (myTamagotchi.full > ((100 - randomNum) - 1) && myTamagotchi.full < 100) {
       myTamagotchi.full = 100;
     }
     progress.printProgress();
     createFeeder();
   };
   const lessFull = () => {
-    if (myTamagotchi.full > 3) {
-      myTamagotchi.full -= 3;
-    } else if (myTamagotchi.full < 3 && myTamagotchi.full > 0) {
+    $('#pet').toggleClass('image');
+    if (myTamagotchi.full > randomNum) {
+      myTamagotchi.full -= randomNum;
+    } else if (myTamagotchi.full < randomNum && myTamagotchi.full > 0) {
       myTamagotchi.full = 0;
     }
     progress.printProgress();
