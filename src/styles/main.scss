@@ -2,15 +2,17 @@
 @import '../styles/colors';
 
 #app {
-    border: 1px solid black;
     display: flex;
     flex-flow: row wrap;
     #progress {
-        background-color: $lightCyan;
+        background: $lightCyan;
         text-align: center;
-        display: block;
         width: 100%;
         height: 75px;
+        #average {
+            width: 225px;
+            border-radius: 14px;
+        }
     }
     #pet {
         display: block;
